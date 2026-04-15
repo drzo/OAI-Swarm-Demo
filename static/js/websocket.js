@@ -57,10 +57,14 @@ class SwarmWebSocket {
                         this.lastUpdateTime = now;
                     }
                     
-                    // Update agent count with validation
-                    const agentCountElement = document.getElementById('agentCount');
-                    if (agentCountElement) {
-                        agentCountElement.textContent = data.agents.length;
+                    // Update agent count display with validation
+                    const agentCountValueElement = document.getElementById('agentCountValue');
+                    if (agentCountValueElement) {
+                        agentCountValueElement.textContent = data.agents.length;
+                    }
+                    const agentCountSlider = document.getElementById('agentCount');
+                    if (agentCountSlider) {
+                        agentCountSlider.value = data.agents.length;
                     }
                     
                     // Update renderer with error handling
