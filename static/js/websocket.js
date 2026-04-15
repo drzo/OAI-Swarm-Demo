@@ -62,6 +62,10 @@ class SwarmWebSocket {
                     if (agentCountValueEl) {
                         agentCountValueEl.textContent = data.agents.length;
                     }
+                    const agentCountDisplayEl = document.getElementById('agentCountDisplay');
+                    if (agentCountDisplayEl) {
+                        agentCountDisplayEl.textContent = data.agents.length;
+                    }
 
                     // Update renderer with error handling
                     if (window.swarmRenderer) {
